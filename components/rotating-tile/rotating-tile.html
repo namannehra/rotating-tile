@@ -1,0 +1,128 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-animation/core-animation.html">
+<link rel="import" href="../core-animation/core-animation-group.html">
+<!--
+Element providing rotating tile.
+##### Example:
+	<rotating-tile></rotating-tile>
+
+The default tile cycles between four colors; by default they are blue, red, yellow and green. These colors and duration on animation can be customized.
+##### Example:
+	<rotating-tile duration="8000" color1="rgba(0,0,0,0.54)" color2="pink" color3="black" color4="pink"></rotating-tile>
+
+Add 'circle' class changes the shape of the tile to circle (by setting border-radius to 50%).
+##### Example:
+	<rotating-tile class="circle"></rotating-tile>
+
+Content can be inserted inside the tile.
+##### Example:
+	<rotating-tile>Some content</rotating-tile>
+
+Can be styled using CSS.
+##### Example:
+	<style>
+		rotating-tile {
+			border-radius: 32px;
+			height: 128px;
+			width: 128px;
+			opacity: 0.7;
+			perspective: 256px;
+		}
+	</style>
+@element rotating-tile
+@blurb Element providing rotating tile.
+@status beta
+@homepage https://github.com/namannehra/rotating-tile/
+-->
+<polymer-element name="rotating-tile" attributes="duration color1 color2 color3 color4">
+	<template>
+		<link rel="stylesheet" href="rotating-tile.css">
+		<div id="tile" fit>
+			<content></content>
+		</div>
+		<core-animation-group id="animation" duration="2400">
+			<core-animation id="rotate" iterations="Infinity">
+				<core-animation-keyframe>
+					<core-animation-prop name="transform" value="rotateX(0deg) rotateY(0deg)"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="transform" value="rotateX(-180deg) rotateY(0deg)"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="transform" value="rotateX(-180deg) rotateY(180deg)"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="transform" value="rotateX(0deg) rotateY(180deg)"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="transform" value="rotateX(0deg) rotateY(360deg)"></core-animation-prop>
+				</core-animation-keyframe>
+			</core-animation>
+			<core-animation id="color" delay="300" easing="steps(4)" iterations="Infinity">
+				<core-animation-keyframe>
+					<core-animation-prop name="background-color" value="#D32F2F"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="background-color" value="#FBC02D"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="background-color" value="#388E3C"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="background-color" value="#1976D2"></core-animation-prop>
+				</core-animation-keyframe>
+				<core-animation-keyframe>
+					<core-animation-prop name="background-color" value="#D32F2F"></core-animation-prop>
+				</core-animation-keyframe>
+			</core-animation>
+		</core-animation-group>
+	</template>
+	<script src="rotating-tile.js"></script>
+	<script>
+		/**
+		* Animation duration in milliseconds.
+		*
+		* @property duration
+		* @type number
+		* @default 2400
+		*/
+		/**
+		* First CSS background-color.
+		*
+		* @property color1
+		* @type string
+		* @default '#1976D2'
+		*/
+		/**
+		* Second CSS background-color.
+		*
+		* @property color2
+		* @type string
+		* @default '#D32F2F'
+		*/
+		/**
+		* Third CSS background-color.
+		*
+		* @property color3
+		* @type string
+		* @default '#FBC02D'
+		*/
+		/**
+		* Fourth CSS background-color.
+		*
+		* @property color4
+		* @type string
+		* @default '#388E3C'
+		*/
+		/**
+		* Plays the animation. If the animation is currently paused, seeks the animation to the beginning before starting playback.
+		*
+		* @method play
+		*/
+		/**
+		* Pauses the animation.
+		*
+		* @method pause
+		*/
+	</script>
+</polymer-element>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>rotating-tile Demo</title>
+		<script src="../webcomponentsjs/webcomponents.min.js"></script>
+		<link rel="import" href="rotating-tile.html">
+		<style>
+			body {
+				margin: 32px 32px 0 32px;
+			}
+			p {
+				margin-bottom: 64px;
+			}
+			.box {
+				background-color: rgba(0,0,0,0.54);
+				height: 50%;
+				width: 50%;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body unresolved>
+		<rotating-tile></rotating-tile>
+		<p>Default</p>
+		<rotating-tile duration="8000" color1="rgba(0,0,0,0.54)" color2="pink" color3="black" color4="pink"></rotating-tile>
+		<p>
+			duration="8000"<br>
+			color1="rgba(0,0,0,0.54)"<br>
+			color2="pink"<br>
+			color3="black"<br>
+			color4="pink"<br>
+		</p>
+		<rotating-tile class="circle"></rotating-tile>
+		<p>class="circle"</p>
+		<rotating-tile>
+			<div class="box" fit></div>
+		</rotating-tile>
+		<p>with content inside</p>
+		<rotating-tile style="border-radius:32px;height:128px;width:128px;opacity: 0.7;perspective: 256px;"></rotating-tile>
+		<p>
+			border-radius: 32px;<br>
+			height: 128px;<br>
+			width: 128px;<br>
+			opacity: 0.7;<br>
+			perspective: 256px;
+		</p>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+{
+	"name": "rotating-tile",
+	"version": "1.0.0",
+	"authors": [
+		"Naman Nehra <naman.nehra98@gmail.com>"
+	],
+	"description": "Element providing rotating tile.",
+	"keywords": [
+		"rotating-tile",
+		"web-component",
+		"web-components",
+		"polymer"
+	],
+	"main": "rotating-tile.html",
+	"license": "MIT",
+	"homepage": "https://github.com/namannehra/rotating-tile/",
+	"ignore": [
+		"/.*",
+		"/tests/"
+	],
+	"dependencies": {
+		"polymer": "Polymer/polymer#^0.5",
+		"core-animation": "Polymer/core-animation#^0.5"
+	},
+	"devDependencies": {
+		"core-component-page": "Polymer/core-component-page#^0.5"
+	}
+}
