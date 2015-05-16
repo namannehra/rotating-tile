@@ -3,6 +3,17 @@ rotating-tile
 
 See the [component page](https://namannehra.github.io/rotating-tile/) for more information.
 
+## Installing
+
+##### Install using bower.
+	bower install --save namannehra/rotating-tile#latest
+
+##### Import webcomponents.js for browser which lack native support for web components. Import rotating-tile.
+	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	<link rel="import" href="bower_components/rotating-tile/rotating-tile.html">
+
+## Getting Started
+
 Element providing rotating tile.
 ##### Example:
 	<rotating-tile></rotating-tile>
