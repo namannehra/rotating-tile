@@ -1,0 +1,19 @@
+:host {
+	display: inline-block;
+	border-radius: 2px;
+	height: 64px;
+	width: 64px;
+	position: relative;
+	perspective: 192px;
+}
+:host(.circle) {
+	perspective: none;
+}
+#tile {
+	background-color: #1976D2;
+	border-radius: inherit;
+	overflow: hidden;
+}
+:host(.circle) #tile {
+	border-radius: 50%;
+}
