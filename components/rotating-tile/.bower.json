@@ -30,11 +30,11 @@
   "devDependencies": {
     "core-component-page": "Polymer/core-component-page#^0.5"
   },
-  "_release": "505b9122ee",
+  "_release": "4b72cef9e6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "505b9122ee78a533f778e927a452c1a2f35652e1"
+    "commit": "4b72cef9e6292d1b7b2c6d9ed854ff5c9f4791bd"
   },
   "_source": "git://github.com/namannehra/rotating-tile.git",
   "_target": "master",
