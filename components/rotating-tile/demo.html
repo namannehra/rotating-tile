@@ -23,14 +23,18 @@
 	</head>
 	<body unresolved>
 		<rotating-tile></rotating-tile>
-		<p>Default</p>
-		<rotating-tile duration="8000" color1="rgba(0,0,0,0.54)" color2="pink" color3="black" color4="pink"></rotating-tile>
 		<p>
-			duration="8000"<br>
+			Default<br>
+			<button id="play">Play</button>
+			<button id="pause">Pause</button>
+		</p>
+		<rotating-tile duration="4000" color1="rgba(0,0,0,0.54)" color2="purple" color3="rgba(0,0,0,0.54)" color4="purple"></rotating-tile>
+		<p>
+			duration="4000"<br>
 			color1="rgba(0,0,0,0.54)"<br>
-			color2="pink"<br>
-			color3="black"<br>
-			color4="pink"<br>
+			color2="purple"<br>
+			color3="rgba(0,0,0,0.54)"<br>
+			color4="purple"<br>
 		</p>
 		<rotating-tile class="circle"></rotating-tile>
 		<p>class="circle"</p>
@@ -43,8 +47,19 @@
 			border-radius: 32px;<br>
 			height: 128px;<br>
 			width: 128px;<br>
-			opacity: 0.7;<br>
+			opacity: 0.54;<br>
 			perspective: 256px;
 		</p>
+		<script>
+			var play = document.querySelector('#play');
+			var pause = document.querySelector('#pause');
+			var tile = document.querySelector('rotating-tile');
+			play.onclick = function() {
+				tile.play();
+			};
+			pause.onclick = function() {
+				tile.pause();
+			};
+		</script>
 	</body>
 </html>

@@ -7,13 +7,10 @@
 	perspective: 192px;
 }
 :host(.circle) {
+	border-radius: 50%;
 	perspective: none;
 }
 #tile {
-	background-color: #1976D2;
 	border-radius: inherit;
 	overflow: hidden;
-}
-:host(.circle) #tile {
-	border-radius: 50%;
 }
