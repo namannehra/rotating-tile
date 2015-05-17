@@ -63,10 +63,13 @@ Can be styled using CSS.
 <style>
 	rotating-tile {
 		border-radius: 32px;
+		/* It is recommended to keep height and width equal */
 		height: 128px;
-		width: 128px; /* It is recommended to keep height and width equal */
+		width: 128px;
 		opacity: 0.7;
-		perspective: 256px; /* It is recommended to set perspective equal to double of height */
+		/* It is recommended to set perspective equal to double of height */
+		-webkit-perspective: 256px;
+		perspective: 256px;
 	}
 </style>
 ```
