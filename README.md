@@ -10,7 +10,7 @@ Install using bower.
 bower install --save namannehra/rotating-tile#latest
 ```
 
-Import webcomponents.js for browser which lack native support for web components. Import rotating-tile.
+Import webcomponents.js for browsers which lack native support for web components. Import rotating-tile.
 ```
 <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 <link rel="import" href="bower_components/rotating-tile/rotating-tile.html">
