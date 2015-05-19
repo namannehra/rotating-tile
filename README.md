@@ -73,3 +73,10 @@ Can be styled using CSS.
 	}
 </style>
 ```
+
+## Help and Support
+
+Send an email for support or feature request.
+```
+naman.nehra98@gmail.com
+```
