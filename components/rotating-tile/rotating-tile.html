@@ -68,8 +68,8 @@ Can be styled using CSS.
 		<div id="tile" fit>
 			<content></content>
 		</div>
-		<core-animation-group id="animation">
-			<core-animation id="rotate" iterations="Infinity">
+		<core-animation-group id="animation" duration="{{duration}}" target="{{$.tile}}">
+			<core-animation iterations="Infinity">
 				<core-animation-keyframe>
 					<core-animation-prop name="transform" value="rotateX(0deg) rotateY(0deg)"></core-animation-prop>
 				</core-animation-keyframe>
@@ -86,21 +86,21 @@ Can be styled using CSS.
 					<core-animation-prop name="transform" value="rotateX(0deg) rotateY(360deg)"></core-animation-prop>
 				</core-animation-keyframe>
 			</core-animation>
-			<core-animation id="color" easing="steps(4)" iterations="Infinity">
+			<core-animation delay="{{duration / 8}}" easing="steps(4)" iterations="Infinity">
 				<core-animation-keyframe>
-					<core-animation-prop name="background-color"></core-animation-prop>
+					<core-animation-prop name="background-color" value="{{color2}}"></core-animation-prop>
 				</core-animation-keyframe>
 				<core-animation-keyframe>
-					<core-animation-prop name="background-color"></core-animation-prop>
+					<core-animation-prop name="background-color" value="{{color3}}"></core-animation-prop>
 				</core-animation-keyframe>
 				<core-animation-keyframe>
-					<core-animation-prop name="background-color"></core-animation-prop>
+					<core-animation-prop name="background-color" value="{{color4}}"></core-animation-prop>
 				</core-animation-keyframe>
 				<core-animation-keyframe>
-					<core-animation-prop name="background-color"></core-animation-prop>
+					<core-animation-prop name="background-color" value="{{color1}}"></core-animation-prop>
 				</core-animation-keyframe>
 				<core-animation-keyframe>
-					<core-animation-prop name="background-color"></core-animation-prop>
+					<core-animation-prop name="background-color" value="{{color2}}"></core-animation-prop>
 				</core-animation-keyframe>
 			</core-animation>
 		</core-animation-group>
