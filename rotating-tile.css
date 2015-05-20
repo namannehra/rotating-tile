@@ -12,6 +12,7 @@
 	perspective: none;
 }
 #tile {
+	background-color: {{color1}};
 	border-radius: inherit;
 	overflow: hidden;
 }
